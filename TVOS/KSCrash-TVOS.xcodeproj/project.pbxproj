@@ -228,6 +228,18 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F01D1702210129CB00EC82A7 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		03082CD61D91822300935324 /* KSCrashMonitor_Zombie.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = KSCrashMonitor_Zombie.c; sourceTree = "<group>"; };
 		8A2506FE1DA8768E00D7F158 /* KSCrashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KSCrashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -444,6 +456,7 @@
 		CBEE5D7E1CB86ABE005EAF61 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		CBEE5DBC1CBC14CF005EAF61 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode.h"; sourceTree = "<group>"; };
 		CBEE5DBD1CBC14CF005EAF61 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
+		F01D1704210129CB00EC82A7 /* libKSCrashLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKSCrashLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -460,6 +473,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBEE5D7F1CB86ABE005EAF61 /* libz.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F01D1701210129CB00EC82A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +543,7 @@
 			children = (
 				CBEE5C271CB8679E005EAF61 /* KSCrash.framework */,
 				8A2506FE1DA8768E00D7F158 /* KSCrashTests.xctest */,
+				F01D1704210129CB00EC82A7 /* libKSCrashLib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -998,6 +1019,23 @@
 			productReference = CBEE5C271CB8679E005EAF61 /* KSCrash.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		F01D1703210129CB00EC82A7 /* KSCrashLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F01D170C210129CB00EC82A7 /* Build configuration list for PBXNativeTarget "KSCrashLib" */;
+			buildPhases = (
+				F01D1700210129CB00EC82A7 /* Sources */,
+				F01D1701210129CB00EC82A7 /* Frameworks */,
+				F01D1702210129CB00EC82A7 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KSCrashLib;
+			productName = KSCrashLib;
+			productReference = F01D1704210129CB00EC82A7 /* libKSCrashLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1012,6 +1050,10 @@
 					};
 					CBEE5C261CB8679E005EAF61 = {
 						CreatedOnToolsVersion = 7.3;
+					};
+					F01D1703210129CB00EC82A7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -1029,6 +1071,7 @@
 			targets = (
 				CBEE5C261CB8679E005EAF61 /* KSCrash */,
 				8A2506FD1DA8768E00D7F158 /* KSCrashTests */,
+				F01D1703210129CB00EC82A7 /* KSCrashLib */,
 			);
 		};
 /* End PBXProject section */
@@ -1172,6 +1215,13 @@
 				CBA1A53E1DD25049007B1CE7 /* KSDemangle_Swift.cpp in Sources */,
 				CB9821D01DFB42DA00164220 /* KSMach.c in Sources */,
 				CBEE5D6A1CB86989005EAF61 /* KSHTTPRequestSender.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F01D1700210129CB00EC82A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1394,6 +1444,66 @@
 			};
 			name = Release;
 		};
+		F01D170A210129CB00EC82A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = NO;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = "";
+				DSTROOT = /tmp/KSCrashLib.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KSCrash/KSCrash-Prefix.pch";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+				VERSIONING_SYSTEM = "";
+			};
+			name = Debug;
+		};
+		F01D170B210129CB00EC82A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = NO;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos11.2]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = "";
+				DSTROOT = /tmp/KSCrashLib.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KSCrash/KSCrash-Prefix.pch";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+				VERSIONING_SYSTEM = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1420,6 +1530,15 @@
 			buildConfigurations = (
 				CBEE5C301CB8679E005EAF61 /* Debug */,
 				CBEE5C311CB8679E005EAF61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F01D170C210129CB00EC82A7 /* Build configuration list for PBXNativeTarget "KSCrashLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F01D170A210129CB00EC82A7 /* Debug */,
+				F01D170B210129CB00EC82A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
