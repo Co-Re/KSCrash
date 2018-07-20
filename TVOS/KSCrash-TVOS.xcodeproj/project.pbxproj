@@ -216,6 +216,8 @@
 		CBEE5D7F1CB86ABE005EAF61 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CBEE5D7E1CB86ABE005EAF61 /* libz.tbd */; };
 		CBEE5DBE1CBC14CF005EAF61 /* NSString+URLEncode.h in Headers */ = {isa = PBXBuildFile; fileRef = CBEE5DBC1CBC14CF005EAF61 /* NSString+URLEncode.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		CBEE5DBF1CBC14CF005EAF61 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = CBEE5DBD1CBC14CF005EAF61 /* NSString+URLEncode.m */; };
+		F05D76CA2101DF7000968B97 /* KSCrashLib_TVOS.m in Sources */ = {isa = PBXBuildFile; fileRef = F05D76C92101DF7000968B97 /* KSCrashLib_TVOS.m */; };
+		F05D76CB2101DF7000968B97 /* KSCrashLib_TVOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = F05D76C82101DF7000968B97 /* KSCrashLib_TVOS.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -229,12 +231,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F01D1702210129CB00EC82A7 /* CopyFiles */ = {
+		F05D76C42101DF7000968B97 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				F05D76CB2101DF7000968B97 /* KSCrashLib_TVOS.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +459,9 @@
 		CBEE5D7E1CB86ABE005EAF61 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		CBEE5DBC1CBC14CF005EAF61 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode.h"; sourceTree = "<group>"; };
 		CBEE5DBD1CBC14CF005EAF61 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
-		F01D1704210129CB00EC82A7 /* libKSCrashLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKSCrashLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F05D76C62101DF7000968B97 /* libKSCrashLib-TVOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libKSCrashLib-TVOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F05D76C82101DF7000968B97 /* KSCrashLib_TVOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KSCrashLib_TVOS.h; sourceTree = "<group>"; };
+		F05D76C92101DF7000968B97 /* KSCrashLib_TVOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KSCrashLib_TVOS.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -476,7 +481,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F01D1701210129CB00EC82A7 /* Frameworks */ = {
+		F05D76C32101DF7000968B97 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -534,6 +539,7 @@
 				CBEE5D7E1CB86ABE005EAF61 /* libz.tbd */,
 				CBEE5C291CB8679E005EAF61 /* KSCrash-TVOS */,
 				8A2506FF1DA8768E00D7F158 /* KSCrashTests */,
+				F05D76C72101DF7000968B97 /* KSCrashLib-TVOS */,
 				CBEE5C281CB8679E005EAF61 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -543,7 +549,7 @@
 			children = (
 				CBEE5C271CB8679E005EAF61 /* KSCrash.framework */,
 				8A2506FE1DA8768E00D7F158 /* KSCrashTests.xctest */,
-				F01D1704210129CB00EC82A7 /* libKSCrashLib.a */,
+				F05D76C62101DF7000968B97 /* libKSCrashLib-TVOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -873,6 +879,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F05D76C72101DF7000968B97 /* KSCrashLib-TVOS */ = {
+			isa = PBXGroup;
+			children = (
+				F05D76C82101DF7000968B97 /* KSCrashLib_TVOS.h */,
+				F05D76C92101DF7000968B97 /* KSCrashLib_TVOS.m */,
+			);
+			path = "KSCrashLib-TVOS";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1019,21 +1034,21 @@
 			productReference = CBEE5C271CB8679E005EAF61 /* KSCrash.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F01D1703210129CB00EC82A7 /* KSCrashLib */ = {
+		F05D76C52101DF7000968B97 /* KSCrashLib-TVOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F01D170C210129CB00EC82A7 /* Build configuration list for PBXNativeTarget "KSCrashLib" */;
+			buildConfigurationList = F05D76CE2101DF7000968B97 /* Build configuration list for PBXNativeTarget "KSCrashLib-TVOS" */;
 			buildPhases = (
-				F01D1700210129CB00EC82A7 /* Sources */,
-				F01D1701210129CB00EC82A7 /* Frameworks */,
-				F01D1702210129CB00EC82A7 /* CopyFiles */,
+				F05D76C22101DF7000968B97 /* Sources */,
+				F05D76C32101DF7000968B97 /* Frameworks */,
+				F05D76C42101DF7000968B97 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = KSCrashLib;
-			productName = KSCrashLib;
-			productReference = F01D1704210129CB00EC82A7 /* libKSCrashLib.a */;
+			name = "KSCrashLib-TVOS";
+			productName = "KSCrashLib-TVOS";
+			productReference = F05D76C62101DF7000968B97 /* libKSCrashLib-TVOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -1051,7 +1066,7 @@
 					CBEE5C261CB8679E005EAF61 = {
 						CreatedOnToolsVersion = 7.3;
 					};
-					F01D1703210129CB00EC82A7 = {
+					F05D76C52101DF7000968B97 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -1071,7 +1086,7 @@
 			targets = (
 				CBEE5C261CB8679E005EAF61 /* KSCrash */,
 				8A2506FD1DA8768E00D7F158 /* KSCrashTests */,
-				F01D1703210129CB00EC82A7 /* KSCrashLib */,
+				F05D76C52101DF7000968B97 /* KSCrashLib-TVOS */,
 			);
 		};
 /* End PBXProject section */
@@ -1218,10 +1233,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F01D1700210129CB00EC82A7 /* Sources */ = {
+		F05D76C22101DF7000968B97 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F05D76CA2101DF7000968B97 /* KSCrashLib_TVOS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1444,63 +1460,41 @@
 			};
 			name = Release;
 		};
-		F01D170A210129CB00EC82A7 /* Debug */ = {
+		F05D76CC2101DF7000968B97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = NO;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = "";
-				DSTROOT = /tmp/KSCrashLib.dst;
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KSCrash/KSCrash-Prefix.pch";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "-ObjC";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.2;
-				VERSIONING_SYSTEM = "";
 			};
 			name = Debug;
 		};
-		F01D170B210129CB00EC82A7 /* Release */ = {
+		F05D76CD2101DF7000968B97 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ANALYZER_LOCALIZABILITY_EMPTY_CONTEXT = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = NO;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos11.2]" = "iPhone Developer";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = "";
-				DSTROOT = /tmp/KSCrashLib.dst;
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "KSCrash/KSCrash-Prefix.pch";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-ObjC";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 11.2;
-				VERSIONING_SYSTEM = "";
 			};
 			name = Release;
 		};
@@ -1534,11 +1528,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F01D170C210129CB00EC82A7 /* Build configuration list for PBXNativeTarget "KSCrashLib" */ = {
+		F05D76CE2101DF7000968B97 /* Build configuration list for PBXNativeTarget "KSCrashLib-TVOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F01D170A210129CB00EC82A7 /* Debug */,
-				F01D170B210129CB00EC82A7 /* Release */,
+				F05D76CC2101DF7000968B97 /* Debug */,
+				F05D76CD2101DF7000968B97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
