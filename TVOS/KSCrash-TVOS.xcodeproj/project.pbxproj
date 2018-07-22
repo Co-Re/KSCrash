@@ -900,7 +900,7 @@
 			isa = PBXGroup;
 			children = (
 				CBEE5D7E1CB86ABE005EAF61 /* libz.tbd */,
-				CBEE5C291CB8679E005EAF61 /* KSCrash-TVOS */,
+				CBEE5C291CB8679E005EAF61 /* KSCrash */,
 				8A2506FF1DA8768E00D7F158 /* KSCrashTests */,
 				CBEE5C281CB8679E005EAF61 /* Products */,
 				F05D78BE210208FA00968B97 /* Frameworks */,
@@ -917,7 +917,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CBEE5C291CB8679E005EAF61 /* KSCrash-TVOS */ = {
+		CBEE5C291CB8679E005EAF61 /* KSCrash */ = {
 			isa = PBXGroup;
 			children = (
 				CBEE5C4D1CB86989005EAF61 /* Recording */,
@@ -927,7 +927,7 @@
 				CBEE5C4F1CB86989005EAF61 /* KSCrash.m */,
 				CBEE5D7A1CB86A08005EAF61 /* Supporting Files */,
 			);
-			path = "KSCrash-TVOS";
+			path = KSCrash;
 			sourceTree = "<group>";
 		};
 		CBEE5C321CB86989005EAF61 /* Installations */ = {
