@@ -501,7 +501,7 @@
 		F05D76C42101DF7000968B97 /* Copy Headers */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/KSCrash-TVOS";
+			dstPath = "include/KSCrash";
 			dstSubfolderSpec = 16;
 			files = (
 				F05D774B2101FB4300968B97 /* KSCrashReportSinkConsole.h in Copy Headers */,
@@ -1477,7 +1477,7 @@
 				8A2507051DA8768E00D7F158 /* PBXTargetDependency */,
 			);
 			name = KSCrashTests;
-			productName = KSCrashTests;
+			productName = KSCrashLibTests;
 			productReference = 8A2506FE1DA8768E00D7F158 /* KSCrashTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
@@ -1495,7 +1495,7 @@
 			dependencies = (
 			);
 			name = KSCrash;
-			productName = "KSCrash-TVOS";
+			productName = "KSCrashFramework";
 			productReference = CBEE5C271CB8679E005EAF61 /* KSCrash.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -1512,8 +1512,8 @@
 			);
 			dependencies = (
 			);
-			name = "KSCrashLib-TVOS";
-			productName = "KSCrashLib-TVOS";
+			name = "KSCrashLib";
+			productName = "KSCrashLib";
 			productReference = F05D76C62101DF7000968B97 /* libKSCrashLib-TVOS.a */;
 			productType = "com.apple.product-type.library.static";
 		};
